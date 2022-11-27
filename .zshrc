@@ -38,6 +38,8 @@ alias emulator="open -a Simulator"
 alias ll="colorls -1"
 alias ls="colorls"
 alias la="colorls -al"
+alias start_ml="conda activate ml"
+alias stop="conda deactivate"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -60,7 +62,7 @@ unset __conda_setup
 # >>> anaconda conda config >>> 
 PATH="$HOME/miniconda3]/bin:$PATH"
 
-
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 
+export PATH=$PATH:/Users/fiq/.spicetify
