@@ -7,7 +7,6 @@ fi
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-PATH=$(ruby -e 'puts Gem.bindir'):$PATH
 export PATH=/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 export PATH="$PATH:/Users/fiq/dev/flutter/bin"
 export PATH="/opt/homebrew/sbin:$PATH"
@@ -48,13 +47,15 @@ source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 source $ZSH/oh-my-zsh.sh
 
 # colorls
+PATH=$(ruby -e 'puts Gem.bindir'):$PATH
 source $(dirname $(gem which colorls))/tab_complete.sh
-
-# alias for file
-alias new="mkdir"
 alias ll="colorls -1"
 alias ls="colorls"
 alias la="colorls -al"
+
+# alias for file
+alias new="mkdir"
+alias clr="clear"
 
 # alias for python
 alias pip="pip3"
@@ -70,4 +71,3 @@ alias android="adb start-server; emulator -avd Android"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
