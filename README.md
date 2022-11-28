@@ -14,20 +14,21 @@
 
 ## Alias
 ### Alias for file
-alias new="mkdir"
-alias clr="clear"
+- alias new="mkdir"
+- alias clr="clear"
 
 ### Alias for python
-alias pip="pip3"
-alias p="python3"
-alias python="python3"
+- alias pip="pip3"
+- alias p="python3"
+- alias python="python3"
+
 #### env
-alias stop="conda deactivate"
-alias start="conda activate"
+- alias stop="conda deactivate"
+- alias start="conda activate"
 
 ### Alias for emulator
-alias iPhone="open -a Simulator"
-alias android="adb start-server; emulator -avd Android"
+- alias iPhone="open -a Simulator"
+- alias android="adb start-server; emulator -avd Android"
 
 ## Theme
 [Powerlevel10k](https://github.com/romkatv/powerlevel10k)
