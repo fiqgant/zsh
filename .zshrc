@@ -62,7 +62,7 @@ alias p="python3"
 alias python="python3"
 # env
 alias stop="conda deactivate"
-alias start_ml="conda activate ml"
+alias start="conda activate"
 
 # alias for emulator
 alias iPhone="open -a Simulator"
