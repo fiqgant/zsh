@@ -7,42 +7,18 @@ fi
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
+PATH=$(ruby -e 'puts Gem.bindir'):$PATH
 export PATH=/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 export PATH="$PATH:/Users/fiq/dev/flutter/bin"
 export PATH="/opt/homebrew/sbin:$PATH"
 export PATH="/opt/homebrew/sbin:$PATH"export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
-PATH=$(ruby -e 'puts Gem.bindir'):$PATH
-
-# Path to your oh-my-zsh installation.
+export ANDROID_HOME="$HOME/Library/Android/Sdk"
+export PATH="$ANDROID_HOME/emulator:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools:$PATH"
 export ZSH="$HOME/.oh-my-zsh"
-
-# Theme
-ZSH_THEME="powerlevel10k/powerlevel10k"
 export GEM_HOME="$HOME/.gem"
-
-# Plugins
-plugins=(git)
-plugins=(git zsh-autosuggestions web-search z)
-
-#syntax-lighting
-source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source $ZSH/oh-my-zsh.sh
-
-# colorls
-source $(dirname $(gem which colorls))/tab_complete.sh
-
-alias new="mkdir"
-alias pip="pip3"
-alias python="python3"
-alias emulator="open -a Simulator"
-alias ll="colorls -1"
-alias ls="colorls"
-alias la="colorls -al"
-alias start_ml="conda activate ml"
-alias stop="conda deactivate"
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+export PATH=$PATH:/Users/fiq/.spicetify
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -58,11 +34,40 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-
 # >>> anaconda conda config >>> 
 PATH="$HOME/miniconda3]/bin:$PATH"
 
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
+# Theme
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
-export PATH=$PATH:/Users/fiq/.spicetify
+# Plugins
+plugins=(git zsh-autosuggestions web-search z)
+
+#syntax-lighting
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $ZSH/oh-my-zsh.sh
+
+# colorls
+source $(dirname $(gem which colorls))/tab_complete.sh
+
+# alias for file
+alias new="mkdir"
+alias ll="colorls -1"
+alias ls="colorls"
+alias la="colorls -al"
+
+# alias for python
+alias pip="pip3"
+alias p="python3"
+alias python="python3"
+# env
+alias stop="conda deactivate"
+alias start_ml="conda activate ml"
+
+# alias for emulator
+alias iPhone="open -a Simulator"
+alias android="adb start-server; emulator -avd Android"
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
