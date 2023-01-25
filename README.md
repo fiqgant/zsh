@@ -30,5 +30,33 @@
 - alias iPhone="open -a Simulator"
 - alias android="adb start-server; emulator -avd Android"
 
+# AI
+alias ai="npx terminalgpt chat"
+
+# Utilities
+## Find wifi password
+alias wifi_pass_for="security find-generic-password -wa"
+
+## Stay awake
+alias awake="caffeinate"
+
+## show download
+alias download_show="sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'select LSQuarantineDataURLString from LSQuarantineEvent'"
+
+## delete download
+alias download_delete="sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'"
+
+## IP
+alias ip="ifconfig en0"
+
+## Music
+alias music="spotify open"
+alias music_p="spotify play"
+alias music_n="spotify next"
+alias music_b="spotify back"
+alias music_m="spotify mute"
+alias music_u="spotify unmute"
+alias music_r="spotify replay"
+
 ## Theme
 [Powerlevel10k](https://github.com/romkatv/powerlevel10k)
