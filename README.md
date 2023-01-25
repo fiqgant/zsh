@@ -30,26 +30,26 @@
 - alias iPhone="open -a Simulator"
 - alias android="adb start-server; emulator -avd Android"
 
-# AI
+### AI
 alias ai="npx terminalgpt chat"
 
-# Utilities
-## Find wifi password
+### Utilities
+#### Find wifi password
 alias wifi_pass_for="security find-generic-password -wa"
 
-## Stay awake
+#### Stay awake
 alias awake="caffeinate"
 
-## show download
+#### show download
 alias download_show="sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'select LSQuarantineDataURLString from LSQuarantineEvent'"
 
-## delete download
+#### delete download
 alias download_delete="sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'"
 
-## IP
+#### IP
 alias ip="ifconfig en0"
 
-## Music
+#### Music
 alias music="spotify open"
 alias music_p="spotify play"
 alias music_n="spotify next"
