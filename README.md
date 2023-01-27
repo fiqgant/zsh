@@ -11,6 +11,9 @@
 - [web-search](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/web-search)
 - [z](https://github.com/agkozak/zsh-z)
 - [colorls](https://github.com/athityakumar/colorls)
+- [terminalGPT](https://github.com/jucasoliveira/terminalGPT)
+- [Spotify Client for Mac OS X](https://github.com/ersel/spotify-cli-mac)
+- [terminal-notifier](https://github.com/caarlos0/timer)
 
 ## Alias
 ### Alias for file
@@ -57,6 +60,17 @@ alias music_b="spotify back"
 alias music_m="spotify mute"
 alias music_u="spotify unmute"
 alias music_r="spotify replay"
+
+#### Pomodoro Timer
+alias work="timer 30m && terminal-notifier -message 'Pomodoro'\
+        -title 'Work Timer is up! Take a Break 😊'\
+        -appIcon '~/Pictures/pumpkin.png'\
+        -sound Crystal"
+        
+alias rest="timer 10m && terminal-notifier -message 'Pomodoro'\
+        -title 'Break is over! Get back to work 😬'\
+        -appIcon '~/Pictures/pumpkin.png'\
+        -sound Crystal"
 
 ## Theme
 [Powerlevel10k](https://github.com/romkatv/powerlevel10k)
