@@ -1,9 +1,11 @@
+# Fig pre block. Keep at the top of this file.
+[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+# if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+#   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+# fi
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -12,6 +14,7 @@ export PATH="$PATH:/Users/fiq/dev/flutter/bin"
 export PATH="/opt/homebrew/sbin:$PATH"
 export PATH="/opt/homebrew/sbin:$PATH"export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+export PATH="/opt/metasploit-framework/bin:$PATH"
 export ANDROID_HOME="$HOME/Library/Android/Sdk"
 export PATH="$ANDROID_HOME/emulator:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools:$PATH"
 export ZSH="$HOME/.oh-my-zsh"
@@ -20,11 +23,16 @@ export PATH=$PATH:/Users/fiq/.spicetify
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 
+# oh my posh
+eval "$(oh-my-posh init zsh --config ~/.oh-my-posh/themes/fiq.omp.json)"
+
 # Theme
-ZSH_THEME="powerlevel10k/powerlevel10k"
+# ZSH_THEME="powerlevel10k/powerlevel10k"
+# typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
 # Plugins
-plugins=(git zsh-autosuggestions web-search z)
+plugins=(git zsh-autosuggestions web-search z virtualenv)
+
 
 #syntax-lighting
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -95,7 +103,7 @@ alias rest="timer 10m && terminal-notifier -message 'Pomodoro'\
         -sound Crystal"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -111,3 +119,6 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+# Fig post block. Keep at the bottom of this file.
+[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
